@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="PagAI.Application/PagAI.Application.csproj" />
+  <Project Path="PagAI.Domain/PagAI.Domain.csproj" />
+  <Project Path="PagAI.Infrastructure/PagAI.Infrastructure.csproj" />
+  <Project Path="PagAI.UI/PagAI.UI.csproj" />
+</Solution>
