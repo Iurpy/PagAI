@@ -1,0 +1,174 @@
+<UserControl x:Class="PagAI.UI.Views.ClienteFormView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="{StaticResource BgBrush}">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+
+        <Grid Margin="0,0,0,30">
+
+            <StackPanel MaxWidth="900">
+
+                <!-- CABEÇALHO -->
+                <DockPanel Margin="0,0,0,24">
+
+                    <StackPanel>
+
+                        <Button Content="← Voltar"
+                                Width="115"
+                                Height="38"
+                                HorizontalAlignment="Left"
+                                Style="{StaticResource SecondaryButtonStyle}"
+                                Click="BtnVoltar_Click"/>
+
+                        <TextBlock Text="Novo Cliente"
+                                   FontSize="32"
+                                   FontWeight="Bold"
+                                   Foreground="White"
+                                   Margin="0,20,0,4"/>
+
+                        <TextBlock Text="Cadastre um novo cliente para começar a gerenciar cobranças e contratos."
+                                   FontSize="14"
+                                   Foreground="{StaticResource MutedBrush}"/>
+
+                    </StackPanel>
+
+                </DockPanel>
+
+                <!-- CARD -->
+                <Border Style="{StaticResource CardStyle}"
+                        Padding="30">
+
+                    <StackPanel>
+
+                        <!-- DADOS PESSOAIS -->
+                        <TextBlock Text="Dados pessoais"
+                                   FontSize="18"
+                                   FontWeight="SemiBold"
+                                   Margin="0,0,0,22"/>
+
+                        <Grid Margin="0,0,0,18">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel>
+
+                                <Label Content="Nome"/>
+
+                                <TextBox x:Name="TxtNome"
+                                         Style="{StaticResource InputTextBoxStyle}"/>
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2">
+
+                                <Label Content="Telefone"/>
+
+                                <TextBox x:Name="TxtTelefone"
+                                         Style="{StaticResource InputTextBoxStyle}"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                        <Grid Margin="0,0,0,18">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="20"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel>
+
+                                <Label Content="CPF"/>
+
+                                <TextBox x:Name="TxtCPF"
+                                         Style="{StaticResource InputTextBoxStyle}"/>
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Column="2">
+
+                                <Label Content="Apelido"/>
+
+                                <TextBox x:Name="TxtApelido"
+                                         Style="{StaticResource InputTextBoxStyle}"/>
+
+                            </StackPanel>
+
+                        </Grid>
+
+                        <Separator Margin="0,6,0,24"/>
+
+                        <!-- ENDEREÇO -->
+                        <TextBlock Text="Endereço"
+                                   FontSize="18"
+                                   FontWeight="SemiBold"
+                                   Margin="0,0,0,18"/>
+
+                        <Label Content="Rua"/>
+
+                        <TextBox x:Name="TxtEnderecoRua"
+                                 Style="{StaticResource InputTextBoxStyle}"
+                                 Margin="0,0,0,22"/>
+
+                        <!-- OBSERVAÇÕES -->
+                        <TextBlock Text="Observações"
+                                   FontSize="18"
+                                   FontWeight="SemiBold"
+                                   Margin="0,0,0,18"/>
+
+                        <Label Content="Observação"/>
+
+                        <Border Background="#0B1220"
+                                BorderBrush="#334155"
+                                BorderThickness="1"
+                                CornerRadius="10">
+
+                            <TextBox x:Name="TxtObservacao"
+                                     Background="Transparent"
+                                     BorderThickness="0"
+                                     Foreground="White"
+                                     CaretBrush="White"
+                                     Padding="14"
+                                     Height="120"
+                                     AcceptsReturn="True"
+                                     TextWrapping="Wrap"
+                                     VerticalScrollBarVisibility="Auto"/>
+                        </Border>
+
+                        <DockPanel Margin="0,30,0,0">
+
+                            <Button Content="Cancelar"
+                                    Width="120"
+                                    Height="42"
+                                    DockPanel.Dock="Left"
+                                    Style="{StaticResource SecondaryButtonStyle}"
+                                    Click="BtnVoltar_Click"/>
+
+                            <Button Content="Salvar Cliente"
+                                    Width="170"
+                                    Height="42"
+                                    DockPanel.Dock="Right"
+                                    HorizontalAlignment="Right"
+                                    Style="{StaticResource PrimaryButtonStyle}"
+                                    Click="BtnSalvar_Click"/>
+
+                        </DockPanel>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </Grid>
+
+    </ScrollViewer>
+
+</UserControl>

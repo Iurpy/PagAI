@@ -2,6 +2,15 @@
   "version": 4,
   "targets": {
     "net10.0": {
+      "BCrypt.Net-Next/4.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/BCrypt-Net-Next.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/BCrypt-Net-Next.dll": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -834,6 +843,20 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "PagAI.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "BCrypt.Net-Next": "4.2.0",
+          "PagAI.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PagAI.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PagAI.Application.dll": {}
+        }
+      },
       "PagAI.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -847,6 +870,31 @@
     }
   },
   "libraries": {
+    "BCrypt.Net-Next/4.2.0": {
+      "sha512": "gwLD2KfCuwQesP17aVh4h6lpiMPEVt5Lbpndo0ej903hNUUTtyxt3ARdDjmuydBRTAUICc7OVKVbaOvc6SQYXA==",
+      "type": "package",
+      "path": "bcrypt.net-next/4.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bcrypt.net-next.4.2.0.nupkg.sha512",
+        "bcrypt.net-next.nuspec",
+        "ico.png",
+        "lib/net10.0/BCrypt-Net-Next.dll",
+        "lib/net10.0/BCrypt.Net-Next.xml",
+        "lib/net462/BCrypt-Net-Next.dll",
+        "lib/net462/BCrypt.Net-Next.xml",
+        "lib/net472/BCrypt-Net-Next.dll",
+        "lib/net472/BCrypt.Net-Next.xml",
+        "lib/net48/BCrypt-Net-Next.dll",
+        "lib/net48/BCrypt.Net-Next.xml",
+        "lib/netstandard2.0/BCrypt-Net-Next.dll",
+        "lib/netstandard2.0/BCrypt.Net-Next.xml",
+        "lib/netstandard2.1/BCrypt-Net-Next.dll",
+        "lib/netstandard2.1/BCrypt.Net-Next.xml",
+        "readme.md"
+      ]
+    },
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -2691,6 +2739,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "PagAI.Application/1.0.0": {
+      "type": "project",
+      "path": "../PagAI.Application/PagAI.Application.csproj",
+      "msbuildProject": "../PagAI.Application/PagAI.Application.csproj"
+    },
     "PagAI.Domain/1.0.0": {
       "type": "project",
       "path": "../PagAI.Domain/PagAI.Domain.csproj",
@@ -2702,6 +2755,7 @@
       "Microsoft.EntityFrameworkCore >= 10.0.9",
       "Microsoft.EntityFrameworkCore.Tools >= 10.0.9",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.2",
+      "PagAI.Application >= 1.0.0",
       "PagAI.Domain >= 1.0.0"
     ]
   },
@@ -2731,6 +2785,9 @@
           "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
+            "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Application\\PagAI.Application.csproj": {
+              "projectPath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Application\\PagAI.Application.csproj"
+            },
             "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Domain\\PagAI.Domain.csproj": {
               "projectPath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Domain\\PagAI.Domain.csproj"
             }

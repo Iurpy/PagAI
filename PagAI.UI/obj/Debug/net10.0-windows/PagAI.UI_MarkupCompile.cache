@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\pedro\Desktop\PagAI\PagAI.UI\App.xaml
-11407045341
-
-6-1442846566
-2232145848451
-MainWindow.xaml;
+301146985150
+22-692495635
+27326612665
+228363998538
+Components\EmptyState.xaml;Components\SearchBox.xaml;Components\Sectiontitle.xaml;Components\Snackbar.xaml;Components\StatCard.xaml;Components\ToastHost.xaml;Components\UserBadge.xaml;MainWindow.xaml;Styles\Buttons.xaml;Styles\Cards.xaml;Styles\Colors.xaml;Styles\Icons.xaml;Styles\Inputs.xaml;Styles\Sidebar.xaml;Styles\Text.xaml;Views\AgendaCobrancasView.xaml;Views\CadastroUsuarioView.xaml;Views\ClienteFormView.xaml;Views\ClientesView.xaml;Views\ContratoDetalhesView.xaml;Views\ContratosView.xaml;Views\Contratos\ReceberParcelaView.xaml;Views\Contratos\Steps\ContratoStep1View.xaml;Views\Contratos\Steps\ContratoStep2View.xaml;Views\Contratos\Steps\ContratoStep3View.xaml;Views\Contratos\Steps\ContratoStep4View.xaml;Views\ContratoWizardView.xaml;Views\DashboardView.xaml;Views\LoginView.xaml;Views\ShellView.xaml;
 
 True
 

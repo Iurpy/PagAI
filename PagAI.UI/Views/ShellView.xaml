@@ -1,0 +1,183 @@
+<UserControl x:Class="PagAI.UI.Views.ShellView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#020617">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0"
+                Background="#0F172A"
+                BorderBrush="#1E293B"
+                BorderThickness="0,0,1,0">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Margin="24,24,24,28">
+                    <TextBlock Text="PagAI"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               Foreground="White"/>
+
+                    <TextBlock Text="Gestão financeira"
+                               FontSize="12"
+                               Foreground="#94A3B8"
+                               Margin="0,4,0,0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="12,0">
+
+                    <Button x:Name="BtnDashboard"
+                            Height="46"
+                            Margin="0,4"
+                            Background="#2563EB"
+                            Foreground="White"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="BtnDashboard_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                        CornerRadius="10">
+                                    <ContentPresenter VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                        <StackPanel Orientation="Horizontal" Margin="16,0">
+                            <TextBlock Text="🏠" FontSize="17" Width="28"/>
+                            <TextBlock Text="Dashboard"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="BtnClientes"
+                            Height="46"
+                            Margin="0,4"
+                            Background="Transparent"
+                            Foreground="#CBD5E1"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="BtnClientes_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                        CornerRadius="10">
+                                    <ContentPresenter VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                        <StackPanel Orientation="Horizontal" Margin="16,0">
+                            <TextBlock Text="👥" FontSize="17" Width="28"/>
+                            <TextBlock Text="Clientes"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="BtnContratos"
+                            Height="46"
+                            Margin="0,4"
+                            Background="Transparent"
+                            Foreground="#CBD5E1"
+                            BorderThickness="0"
+                            Cursor="Hand"
+                            Click="BtnContratos_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                        CornerRadius="10">
+                                    <ContentPresenter VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                        <StackPanel Orientation="Horizontal" Margin="16,0">
+                            <TextBlock Text="📄" FontSize="17" Width="28"/>
+                            <TextBlock Text="Contratos"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="BtnRelatorios"
+                            Height="46"
+                            Margin="0,4"
+                            Background="Transparent"
+                            Foreground="#64748B"
+                            BorderThickness="0"
+                            IsEnabled="False">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}"
+                                        CornerRadius="10">
+                                    <ContentPresenter VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                        <StackPanel Orientation="Horizontal" Margin="16,0">
+                            <TextBlock Text="📊" FontSize="17" Width="28"/>
+                            <TextBlock Text="Relatórios"
+                                       FontSize="14"
+                                       FontWeight="SemiBold"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="BtnAgenda"
+        Height="46"
+        Margin="0,4"
+        Background="Transparent"
+        Foreground="#64748B"
+        BorderThickness="0"
+        Click="BtnAgenda_Click">
+
+    <Button.Template>
+        <ControlTemplate TargetType="Button">
+            <Border Background="{TemplateBinding Background}"
+                    CornerRadius="10">
+                <ContentPresenter VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+    </Button.Template>
+
+    <StackPanel Orientation="Horizontal"
+                Margin="16,0">
+
+        <TextBlock Text="📅"
+                   FontSize="17"
+                   Width="28"/>
+
+        <TextBlock Text="Agenda"
+                   FontSize="14"
+                   FontWeight="SemiBold"
+                   VerticalAlignment="Center"/>
+
+    </StackPanel>
+
+</Button>
+
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="1"
+                Background="#020617">
+
+            <ContentControl x:Name="MainContent"/>
+        </Border>
+    </Grid>
+</UserControl>

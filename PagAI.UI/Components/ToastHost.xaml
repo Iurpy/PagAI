@@ -1,0 +1,83 @@
+<UserControl x:Class="PagAI.UI.Components.ToastHost"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             IsHitTestVisible="False">
+
+    <Grid>
+        <Border x:Name="ToastContainer"
+                Width="390"
+                MinHeight="66"
+                Padding="16"
+                CornerRadius="16"
+                Background="#111827"
+                BorderBrush="#334155"
+                BorderThickness="1"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="0,0,28,28"
+                Opacity="0"
+                RenderTransformOrigin="0.5,0.5">
+
+            <Border.RenderTransform>
+                <TranslateTransform x:Name="ToastTransform"
+                                    X="40"/>
+            </Border.RenderTransform>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="34"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border x:Name="IconCircle"
+                            Width="26"
+                            Height="26"
+                            CornerRadius="13"
+                            Background="#2563EB"
+                            VerticalAlignment="Top">
+
+                        <TextBlock x:Name="TxtIcon"
+                                   Text="i"
+                                   Foreground="White"
+                                   FontWeight="Bold"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Border>
+
+                    <StackPanel Grid.Column="1">
+                        <TextBlock x:Name="TxtTitle"
+                                   Text="Informação"
+                                   FontSize="14"
+                                   FontWeight="SemiBold"
+                                   Foreground="White"/>
+
+                        <TextBlock x:Name="TxtMessage"
+                                   Text="Mensagem"
+                                   FontSize="13"
+                                   Foreground="#CBD5E1"
+                                   TextWrapping="Wrap"
+                                   Margin="0,4,0,0"/>
+                    </StackPanel>
+                </Grid>
+
+                <Border Grid.Row="1"
+                        Background="#1E293B"
+                        CornerRadius="2"
+                        Margin="0,12,0,0">
+
+                    <Border x:Name="ProgressBar"
+                            Background="#2563EB"
+                            CornerRadius="2"
+                            HorizontalAlignment="Left"
+                            Width="358"/>
+                </Border>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

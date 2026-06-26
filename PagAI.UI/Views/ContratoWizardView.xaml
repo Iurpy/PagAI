@@ -1,0 +1,145 @@
+<UserControl x:Class="PagAI.UI.Views.ContratoWizardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Background="#020617">
+
+    <UserControl.Resources>
+
+        <Style x:Key="BotaoVoltar" TargetType="Button">
+            <Setter Property="Width" Value="170"/>
+            <Setter Property="Height" Value="52"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#0F172A"/>
+            <Setter Property="BorderBrush" Value="#334155"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Borda"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Borda" Property="BorderBrush" Value="#2563EB"/>
+                                <Setter TargetName="Borda" Property="Background" Value="#111827"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Borda" Property="Background" Value="#172554"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="BotaoProximo" TargetType="Button">
+            <Setter Property="Width" Value="170"/>
+            <Setter Property="Height" Value="52"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#2563EB"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Borda"
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Borda" Property="Background" Value="#1D4ED8"/>
+                            </Trigger>
+
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Borda" Property="Background" Value="#1E40AF"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid Margin="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Novo Contrato"
+                       FontSize="30"
+                       FontWeight="Bold"
+                       Foreground="White"/>
+
+            <TextBlock Text="Preencha as informações abaixo."
+                       Margin="0,6,0,0"
+                       Foreground="#94A3B8"/>
+        </StackPanel>
+
+        <ProgressBar Grid.Row="1"
+                     x:Name="ProgressSteps"
+                     Margin="0,25,0,25"
+                     Height="8"
+                     Minimum="1"
+                     Maximum="4"
+                     Value="1"
+                     Foreground="#2563EB"
+                     Background="#334155"/>
+
+        <Border Grid.Row="2"
+                Background="#0F172A"
+                CornerRadius="15"
+                Padding="25">
+
+            <ContentControl x:Name="StepContent"/>
+
+        </Border>
+
+        <Grid Grid.Row="3"
+              Margin="0,25,0,0">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="BtnVoltar"
+                    Grid.Column="0"
+                    HorizontalAlignment="Left"
+                    Content="← Contratos"
+                    Style="{StaticResource BotaoVoltar}"
+                    Click="BtnVoltar_Click"/>
+
+            <Button x:Name="BtnProximo"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Content="Próximo →"
+                    Style="{StaticResource BotaoProximo}"
+                    Click="BtnProximo_Click"/>
+
+        </Grid>
+
+    </Grid>
+
+</UserControl>

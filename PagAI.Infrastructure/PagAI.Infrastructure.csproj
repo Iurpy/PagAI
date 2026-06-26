@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PagAI.Domain\PagAI.Domain.csproj" />
+    <ProjectReference Include="..\PagAI.Application\PagAI.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

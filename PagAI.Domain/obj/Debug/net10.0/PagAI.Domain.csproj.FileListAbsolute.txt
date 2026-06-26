@@ -1,0 +1,12 @@
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\bin\Debug\net10.0\PagAI.Domain.deps.json
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\bin\Debug\net10.0\PagAI.Domain.dll
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\bin\Debug\net10.0\PagAI.Domain.pdb
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\obj\Debug\net10.0\PagAI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\obj\Debug\net10.0\PagAI.Domain.AssemblyInfoInputs.cache
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\obj\Debug\net10.0\PagAI.Domain.AssemblyInfo.cs
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\obj\Debug\net10.0\PagAI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\obj\Debug\net10.0\PagAI.Domain.sourcelink.json
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\obj\Debug\net10.0\PagAI.Domain.dll
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\obj\Debug\net10.0\refint\PagAI.Domain.dll
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\obj\Debug\net10.0\PagAI.Domain.pdb
+C:\Users\pedro\Desktop\PagAI\PagAI.Domain\obj\Debug\net10.0\ref\PagAI.Domain.dll

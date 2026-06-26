@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "J1O9FUQZ3BU=",
+  "dgSpecHash": "gvl7DlO1ED0=",
   "success": true,
   "projectFilePath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Application\\PagAI.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\pedro\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512"
+  ],
   "logs": []
 }
