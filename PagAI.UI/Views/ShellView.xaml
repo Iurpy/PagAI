@@ -113,29 +113,37 @@
                     </Button>
 
                     <Button x:Name="BtnRelatorios"
-                            Height="46"
-                            Margin="0,4"
-                            Background="Transparent"
-                            Foreground="#64748B"
-                            BorderThickness="0"
-                            IsEnabled="False">
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Background="{TemplateBinding Background}"
-                                        CornerRadius="10">
-                                    <ContentPresenter VerticalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
+        Height="46"
+        Margin="0,4"
+        Background="Transparent"
+        Foreground="#64748B"
+        BorderThickness="0"
+        Click="BtnRelatorios_Click">
 
-                        <StackPanel Orientation="Horizontal" Margin="16,0">
-                            <TextBlock Text="📊" FontSize="17" Width="28"/>
-                            <TextBlock Text="Relatórios"
-                                       FontSize="14"
-                                       FontWeight="SemiBold"
-                                       VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </Button>
+    <Button.Template>
+        <ControlTemplate TargetType="Button">
+            <Border Background="{TemplateBinding Background}"
+                    CornerRadius="10">
+                <ContentPresenter VerticalAlignment="Center"/>
+            </Border>
+        </ControlTemplate>
+    </Button.Template>
+
+    <StackPanel Orientation="Horizontal"
+                Margin="16,0">
+
+        <TextBlock Text="📊"
+                   FontSize="17"
+                   Width="28"/>
+
+        <TextBlock Text="Relatórios"
+                   FontSize="14"
+                   FontWeight="SemiBold"
+                   VerticalAlignment="Center"/>
+
+    </StackPanel>
+
+</Button>
 
                     <Button x:Name="BtnAgenda"
         Height="46"

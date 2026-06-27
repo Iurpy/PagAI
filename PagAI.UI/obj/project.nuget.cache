@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VJy2NZ3SZHo=",
+  "dgSpecHash": "pMRpis6i2YA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.UI\\PagAI.UI.csproj",
+  "projectFilePath": "C:\\Users\\pedro\\OneDrive\\Desktop\\PagAI\\PagAI.UI\\PagAI.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -36,6 +36,7 @@
     "C:\\Users\\pedro\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\npgsql\\10.0.3\\npgsql.10.0.3.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\10.0.2\\npgsql.entityframeworkcore.postgresql.10.0.2.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\questpdf\\2026.6.1\\questpdf.2026.6.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\system.composition\\9.0.0\\system.composition.9.0.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\system.composition.attributedmodel\\9.0.0\\system.composition.attributedmodel.9.0.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\system.composition.convention\\9.0.0\\system.composition.convention.9.0.0.nupkg.sha512",
@@ -48,13 +49,13 @@
     {
       "code": "NU1701",
       "level": "Warning",
-      "message": "Package 'WPF.UI 3.4.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net10.0-windows7.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.UI\\PagAI.UI.csproj",
+      "message": "O pacote 'WPF.UI 3.4.2.7' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net10.0-windows7.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "projectPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\PagAI\\PagAI.UI\\PagAI.UI.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.UI\\PagAI.UI.csproj",
+      "filePath": "C:\\Users\\pedro\\OneDrive\\Desktop\\PagAI\\PagAI.UI\\PagAI.UI.csproj",
       "libraryId": "WPF.UI",
       "targetGraphs": [
-        "net10.0-windows"
+        "net10.0-windows7.0"
       ]
     }
   ]

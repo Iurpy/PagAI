@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PagAI.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abe26b3bf4bfa57eabdc4efa7cdc478cb20f81f9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a06c72fc65a6da3208ff37d2c5100e9478c0fbc")]
 [assembly: System.Reflection.AssemblyProductAttribute("PagAI.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PagAI.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

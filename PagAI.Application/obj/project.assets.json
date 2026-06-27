@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 3,
   "targets": {
     "net10.0": {
       "BCrypt.Net-Next/4.2.0": {
@@ -67,11 +67,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Application\\PagAI.Application.csproj",
+      "projectUniqueName": "C:\\Users\\pedro\\OneDrive\\Desktop\\PagAI\\PagAI.Application\\PagAI.Application.csproj",
       "projectName": "PagAI.Application",
-      "projectPath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Application\\PagAI.Application.csproj",
+      "projectPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\PagAI\\PagAI.Application\\PagAI.Application.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Application\\obj\\",
+      "outputPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\PagAI\\PagAI.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -84,11 +84,10 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Domain\\PagAI.Domain.csproj": {
-              "projectPath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Domain\\PagAI.Domain.csproj"
+            "C:\\Users\\pedro\\OneDrive\\Desktop\\PagAI\\PagAI.Domain\\PagAI.Domain.csproj": {
+              "projectPath": "C:\\Users\\pedro\\OneDrive\\Desktop\\PagAI\\PagAI.Domain\\PagAI.Domain.csproj"
             }
           }
         }
@@ -103,11 +102,10 @@
         "auditLevel": "low",
         "auditMode": "all"
       },
-      "SdkAnalysisLevel": "10.0.300"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net10.0": {
-        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "BCrypt.Net-Next": {
@@ -131,7 +129,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

@@ -30,7 +30,7 @@ public partial class ShellView : UserControl
     private void BtnAgenda_Click(object sender, RoutedEventArgs e)
     {
         NavigationService.Navigate(new AgendaCobrancasView());
-    
+        MarcarMenu("Agenda");
     }
 
     private void BtnClientes_Click(object sender, RoutedEventArgs e)
@@ -45,16 +45,27 @@ public partial class ShellView : UserControl
         MarcarMenu("Contratos");
     }
 
+    private void BtnRelatorios_Click(object sender, RoutedEventArgs e)
+    {
+        NavigationService.Navigate(new RelatoriosView());
+        MarcarMenu("Relatorios");
+    }
+
     private void MarcarMenu(string menu)
     {
-        BtnDashboard.Background = CorInativa;
         BtnClientes.Background = CorInativa;
         BtnContratos.Background = CorInativa;
+        BtnDashboard.Background = CorInativa;
+        BtnRelatorios.Background = CorInativa;
+        BtnAgenda.Background = CorInativa;
 
-        BtnDashboard.Foreground = new SolidColorBrush(Color.FromRgb(203, 213, 225));
+
         BtnClientes.Foreground = new SolidColorBrush(Color.FromRgb(203, 213, 225));
         BtnContratos.Foreground = new SolidColorBrush(Color.FromRgb(203, 213, 225));
-
+        BtnDashboard.Foreground = new SolidColorBrush(Color.FromRgb(203,213,225));
+        BtnRelatorios.Foreground = new SolidColorBrush(Color.FromRgb(203,213,225));
+        BtnAgenda.Foreground = new SolidColorBrush(Color.FromRgb(203,213,225));
+        
         switch (menu)
         {
             case "Dashboard":
@@ -71,6 +82,16 @@ public partial class ShellView : UserControl
                 BtnContratos.Background = CorAtiva;
                 BtnContratos.Foreground = Brushes.White;
                 break;
+            
+            case "Relatorios":
+                BtnRelatorios.Background = CorAtiva;
+                BtnRelatorios.Foreground = Brushes.White;
+                break;
+            
+            case "Agenda":
+                BtnAgenda.Background = CorAtiva;
+                BtnAgenda.Foreground = Brushes.White;
+                break;    
         }
     }
 }

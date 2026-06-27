@@ -200,6 +200,28 @@ private static decimal CalcularMulta(Contrato contrato, decimal valorRestante, i
         _ => 0
     };
 }
+
+private async void BtnGerarPdf_Click(object sender, RoutedEventArgs e)
+{
+    try
+    {
+        var contrato = await _contratoService.BuscarPorIdAsync(_contratoId);
+
+        if (contrato == null)
+        {
+            NotificationService.Error("Contrato não encontrado.");
+            return;
+        }
+
+        var caminho = ContratoPdfService.GerarComprovanteContrato(contrato);
+
+        NotificationService.Success($"PDF gerado em: {caminho}");
+    }
+    catch (Exception ex)
+    {
+        NotificationService.Error(ex.Message);
+    }
+}
 private class ParcelaViewModel
 {
     public int ParcelaId { get; set; }

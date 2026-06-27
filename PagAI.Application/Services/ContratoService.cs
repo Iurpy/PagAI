@@ -415,4 +415,122 @@ public async Task<AgendaCobrancasModel> ObterAgendaCobrancasAsync(int usuarioId)
         ProximosDias = proximosDias
     };
 }
+
+public async Task<RelatorioModel> ObterRelatorioAsync(int usuarioId)
+{
+    var contratos = await _contratoRepository.ListarPorUsuarioAsync(usuarioId);
+
+    var contratosAtivos = contratos
+        .Where(c => c.Ativo)
+        .ToList();
+
+    var parcelasAtivas = contratosAtivos
+        .SelectMany(c => c.Parcelas)
+        .Where(p => p.Ativo)
+        .ToList();
+
+    var pagamentos = parcelasAtivas
+        .SelectMany(p => p.Pagamentos)
+        .ToList();
+
+    var hoje = DateTime.UtcNow.Date;
+
+    var totalEmprestado = contratosAtivos.Sum(c => c.ValorEmprestado);
+    var totalComJuros = contratosAtivos.Sum(c => c.ValorTotalComJuros);
+    var totalRecebido = pagamentos.Sum(p => p.Valor);
+
+    var totalEmAberto = parcelasAtivas.Sum(p =>
+    {
+        var restante = p.Valor - p.ValorPago;
+        return restante < 0 ? 0 : restante;
+    });
+
+    return new RelatorioModel
+    {
+        TotalEmprestado = totalEmprestado,
+        TotalComJuros = totalComJuros,
+        TotalRecebido = totalRecebido,
+        TotalEmAberto = totalEmAberto,
+        LucroPrevisto = totalComJuros - totalEmprestado,
+
+        TotalContratos = contratosAtivos.Count,
+        ContratosAtivos = contratosAtivos.Count(c => c.Status == StatusContrato.Ativo),
+        ContratosFinalizados = contratosAtivos.Count(c => c.Status == StatusContrato.Finalizado),
+        ParcelasAtrasadas = parcelasAtivas.Count(p => p.Status == StatusParcela.Atrasado),
+
+        Contratos = contratosAtivos
+            .OrderByDescending(c => c.DataContrato)
+            .Select(c =>
+            {
+                var parcelas = c.Parcelas
+                    .Where(p => p.Ativo)
+                    .ToList();
+
+                var recebido = parcelas
+                    .SelectMany(p => p.Pagamentos)
+                    .Sum(p => p.Valor);
+
+                var emAberto = parcelas.Sum(p =>
+                {
+                    var restante = p.Valor - p.ValorPago;
+                    return restante < 0 ? 0 : restante;
+                });
+
+                return new RelatorioContratoModel
+                {
+                    ContratoId = c.Id,
+                    Cliente = c.Cliente.Nome,
+                    Titulo = c.Titulo,
+                    ValorEmprestado = c.ValorEmprestado,
+                    ValorTotal = c.ValorTotalComJuros,
+                    ValorRecebido = recebido,
+                    ValorEmAberto = emAberto,
+                    Status = c.Status.ToString(),
+                    DataContrato = c.DataContrato
+                };
+            })
+            .ToList(),
+
+        Recebimentos = contratosAtivos
+            .SelectMany(c => c.Parcelas
+                .Where(p => p.Ativo)
+                .SelectMany(p => p.Pagamentos
+                    .Select(pg => new RelatorioRecebimentoModel
+                    {
+                        ContratoId = c.Id,
+                        Cliente = c.Cliente.Nome,
+                        Contrato = c.Titulo,
+                        Parcela = $"Parcela {p.Numero}",
+                        Valor = pg.Valor,
+                        DataPagamento = pg.DataPagamento,
+                        Observacao = pg.Observacao
+                    })))
+            .OrderByDescending(r => r.DataPagamento)
+            .ToList(),
+
+        Inadimplentes = contratosAtivos
+            .SelectMany(c => c.Parcelas
+                .Where(p =>
+                    p.Ativo &&
+                    p.Status == StatusParcela.Atrasado &&
+                    p.ValorPago < p.Valor)
+                .Select(p =>
+                {
+                    var restante = p.Valor - p.ValorPago;
+
+                    return new RelatorioInadimplenteModel
+                    {
+                        ContratoId = c.Id,
+                        Cliente = c.Cliente.Nome,
+                        Contrato = c.Titulo,
+                        Parcela = $"Parcela {p.Numero}",
+                        ValorRestante = restante < 0 ? 0 : restante,
+                        DataVencimento = p.DataVencimento,
+                        DiasAtraso = Math.Max(0, (hoje - p.DataVencimento.Date).Days)
+                    };
+                }))
+            .OrderByDescending(i => i.DiasAtraso)
+            .ToList()
+    };
+}
 }

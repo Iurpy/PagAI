@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d0eA5O0FngI=",
+  "dgSpecHash": "Gy7QCvC5zro=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pedro\\Desktop\\PagAI\\PagAI.Infrastructure\\PagAI.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\pedro\\OneDrive\\Desktop\\PagAI\\PagAI.Infrastructure\\PagAI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

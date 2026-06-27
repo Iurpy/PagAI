@@ -15,6 +15,12 @@
 
                 <StackPanel DockPanel.Dock="Right"
                             Orientation="Horizontal">
+        
+                    <Button Content="Gerar PDF"
+                            Width="120"
+                            Style="{StaticResource SecondaryButtonStyle}"
+                            Click="BtnGerarPdf_Click"
+                            Margin="0,0,12,0"/>        
 
                     <Button Content="Quitar Contrato"
                             Width="150"
